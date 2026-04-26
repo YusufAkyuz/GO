@@ -44,7 +44,7 @@ func main() {
 	fmt.Println("--------------------------------------------------")
 
 	for i := 0; i < 5; i++ {
-		if i == 3 && i == 4 {
+		if i != 3 && i == 4 {
 			fmt.Println("Breaking the loop at i =", i)
 			break
 		}
@@ -77,4 +77,42 @@ func main() {
 		fmt.Printf("Index: %d, Name: %s\n", index, names[index])
 		index++
 	}
+
+	fmt.Println("--------------------------------------------------")
+
+	//Classic for loop with initialization, condition and post statement
+	var numbers2 = []int{1, 2, 3, 4, 5}
+	for index := 0; index < len(numbers2); index++ {
+		fmt.Printf("Index: %d, Number: %d\n", index, numbers2[index])
+	}
+
+	fmt.Println("--------------------------------------------------")
+
+	//For loop with only condition
+	index2 := 0
+	for index2 < len(numbers2) {
+		fmt.Printf("Index: %d, Number: %d\n", index2, numbers2[index2])
+		index2++
+	}
+
+	fmt.Println("--------------------------------------------------")
+
+	var language = "GoLang"
+	for _, char := range language {
+		fmt.Printf("Character: %c\n", char)
+	}
+
+	fmt.Println("--------------------------------------------------")
+
+	var names2 = map[string]int{
+		"Yusuf":  30,
+		"Ahmet":  25,
+		"Mehmet": 35,
+	}
+
+	for key, value := range names2 {
+		fmt.Printf("Key: %s, Value: %d\n", key, value)
+	}
+
+	fmt.Println("--------------------------------------------------")
 }
